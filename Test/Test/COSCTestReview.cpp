@@ -1,11 +1,18 @@
 #include <iostream>
+#include <cassert>
 #include <fstream>
 using namespace std;
-
+double toInches(double inch)
+{
+	assert(inch >= 0);
+	return 2.54 * inch;
+}
 int main()
 {
-	
-	try{
+	cerr << "Error testing" << endl;
+	double in = toInches(5);
+	cout << in << endl;
+	/*try{
 		ifstream myFile("examle.txt");
 		ofstream outFile("new.txt");
 		if (myFile.fail() || outFile.fail()) { throw - 1; }
@@ -35,6 +42,6 @@ int main()
 	catch(int e)
 	{
 		cout << "File not found"<< endl;
-	}
+	}*/
 	system("pause");
 }
